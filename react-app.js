@@ -2,8 +2,17 @@ function YelpResults(props) {
 
 	console.log(props);
 
+	let businesses = props.results.map(function(result, index) {
+		return(
+			<div key={index}>
+				<div>{result.name}</div>
+				<img src={result.image_url} alt=""/>
+			</div>
+		)
+	});
+
 	return(
-		<div>It's working!</div>
+		<div>{businesses}</div>
 	)
 }
 
